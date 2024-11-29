@@ -19,8 +19,8 @@ theme:
 
 nav:
 - Home: index.md
-#- Notebook page: Perceptron.ipynb
-#- Assignment: VAE MNIST.ipynb
+- Notebook page: Perceptron.ipynb
+- Assignment: VAE MNIST.ipynb
 
 
 extra:
@@ -51,8 +51,8 @@ markdown_extensions:
 
 #plugins:
   #- mkdocs-jupyter:
-  #- mknotebooks:
-  #    enable_default_jupyter_cell_styling: false
+  - mknotebooks:
+      enable_default_jupyter_cell_styling: false
       #enable_default_pandas_dataframe_styling: false
       
 
