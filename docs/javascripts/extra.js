@@ -12,7 +12,7 @@ window.addEventListener('load', function() {
         '.highlight',          // Code cells
         '.markdown-cell',      // Markdown cells
         '.jp-Cell',            // Jupyter cells
-        '.cell'                // Generic cells
+        '.cell'             
     ];
 
     const mainContent = document.querySelector('.md-content__inner');
