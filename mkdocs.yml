@@ -2,16 +2,16 @@ site_name: Sidharth
 theme:
   name: material
   features:
-  #  - navigation.footer
-    - navigation.sections
     - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
     - search.suggest
     - content.code.copy
     - content.code.annotate 
     - content.code.select
     - toc.integrate
     
-  #  - search.highlight
   palette:
     scheme: slate
     primary: black
@@ -31,6 +31,7 @@ extra_css:
 
 extra_javascript:
   - javascripts/extra.js
+  - javascripts/cell_logger.js
 
 markdown_extensions:
   - admonition
@@ -50,9 +51,9 @@ markdown_extensions:
 
 
 plugins:
-  #- mkdocs-jupyter:
   - mknotebooks:
       enable_default_jupyter_cell_styling: false
+      #enable_default_pandas_dataframe_styling: false
       
 
 copyright: Copyright &copy;2024 Sidharth Padmanabhan
