@@ -1,6 +1,7 @@
 site_name: Sidharth
 theme:
   name: material
+  favicon: assets/logo-cropped.png
   features:
     - navigation.tabs
     - navigation.tabs.sticky

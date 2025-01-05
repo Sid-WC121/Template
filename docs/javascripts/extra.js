@@ -148,7 +148,6 @@ function processTaggedCells() {
 
 debug('Script loaded');
 
-// Add CSS to make the navigation sticky
 const style = document.createElement('style');
 style.innerHTML = `
     @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap');
@@ -179,11 +178,12 @@ function addCustomNavBar() {
         <div class="custom-nav-links">
             <a class="nav-link" href="https://sid-wc121.github.io/" onclick="handleNavLinkClick(0)">Work</a>
             <a class="nav-link" href="https://sid-wc121.github.io/about" onclick="handleNavLinkClick(1)">About</a>
+            <a class="nav-link" href="https://sid-wc121.github.io/publications" onclick="handleNavLinkClick(1)">Publications</a>
         </div>
         <div class="custom-nav-breadcrumbs">
             <span class="nav-status-circle"></span>
             <span>CRAFT</span>
-            <span>/-</span>
+            <span>-</span>
             ${generateBreadcrumbLinks()}
         </div>
     `;
