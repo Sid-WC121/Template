@@ -1,0 +1,272 @@
+body {
+    background-color: black;
+    visibility: hidden;
+}
+
+body.loaded {
+    visibility: visible;
+}
+
+.hidden-cell {
+    display: none;
+}
+
+.md-nav__link.md-nav__link--active[href="./"] {
+    display: none;
+}
+
+.md-nav__link.md-nav__link--active[href="."] {
+    display: none;
+}
+
+.output {
+    --md-code-bg-color: black;
+}
+
+.md-main, 
+.md-sidebar,
+.md-content,
+.custom-nav-bar {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+}
+
+body.loaded .md-main,
+body.loaded .md-sidebar,
+body.loaded .md-content,
+body.loaded .custom-nav-bar {
+    opacity: 1;
+    visibility: visible;
+}
+
+.custom-nav-bar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    padding: 20px 8px; 
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.custom-nav-bar.loaded {
+    opacity: 1;
+}
+
+.md-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px; 
+    overflow-y: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+    color: grey; 
+}
+
+body.loaded .md-sidebar {
+    opacity: 1;
+}
+
+.md-main__inner {
+    max-width: 85%;
+    overflow: visible;
+    transition: margin 0.3s ease-in-out;
+}
+
+.md-main {
+    margin-top: 120px; 
+}
+
+@media (max-width: 1300px) {
+    .md-main__inner {
+        max-width: 100%;
+        margin-right: 0px;
+        margin-left: 0px;  
+    }
+}
+
+@media (min-width: 1280px) {
+    .md-sidebar {
+        position: fixed;
+        margin-top: 110px; 
+        margin-left: 5%;
+        height: 100%;
+        width: 250px; 
+        overflow-y: auto;
+        opacity: 0;
+        transition: opacity 0.3s ease-in;
+    }
+
+    body.loaded .md-sidebar {
+        opacity: 1;
+    }
+
+    .md-main {
+        margin-left:13%; 
+        transition: margin 0.3s ease-in-out;
+    }
+}
+
+@media (max-width: 1350px) {
+    .md-nav__list {
+        display: none;
+    }
+}
+
+@media (max-width: 720px) {
+    .md-sidebar {
+        display: none;
+    }
+}
+
+.md-header__inner {
+    display: none;
+}
+
+.md-header {
+    display: none;
+}
+
+.custom-nav-logo {
+    position: absolute;
+    left: 12px;
+    margin-left: 32px;
+    padding-top: 5px; 
+}
+
+
+.custom-nav-links {
+    display: flex;
+    max-width: fit-content;
+    margin: 4px auto;
+    height: 50px;
+    width: 290px;  
+    padding: 0rem 1.5rem;
+    padding-top: -1rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 9999px;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    gap: 0.67rem;  
+    backdrop-filter: blur(10px) contrast(1.2) brightness(0.9);
+}
+
+.custom-nav-links a {
+    color: #f8f8f8;
+}
+
+.custom-nav-links .nav-link {
+    font-family: 'Sen', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #f8f8f8;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    padding: 10px 10px;
+}
+
+.custom-nav-links .nav-link:hover {
+    opacity: 0.8;
+}
+
+.custom-nav-duplicate-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.custom-nav-duplicate-links a {
+    color: #f8f8f8;
+}
+
+.custom-nav-breadcrumbs {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    font-size: 0.6rem;
+    color: #f8f8f8;
+    margin-left: 13%;
+    width: 100%;
+}
+
+.custom-nav-breadcrumbs a {
+    color: #f8f8f8;
+    text-decoration: none;
+    font-size: 15px;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+    position: relative;
+    padding-right: 1rem;
+}
+
+.custom-nav-breadcrumbs a:hover {
+    opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+    .custom-nav-breadcrumbs {
+        margin-left: 5%; 
+    }
+}
+
+.nav-status-circle {
+    width: 8px;
+    height: 8px;
+    background-color: #90EE90;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+    box-shadow: 0 0 8px #90EE90;
+}
+
+/* Modify back to top button */
+.md-top {
+    display: none;
+}
+
+/* Footer styling */
+.md-footer,
+.md-footer-meta,
+.md-footer-nav {
+    background-color: black !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.md-footer__inner {
+    background-color: black !important;
+}
+
+.md-footer {
+    background: black;
+}
+
+
+/* Target all Jupyter Notebook content */
+.jp-Cell *,
+.jp-Notebook *,
+.md-content__inner *,
+.jp-OutputArea *,
+.jp-RenderedText *,
+.jp-RenderedMarkdown *,
+.jp-RenderedHTMLCommon *,
+.highlight *,
+.cell *,
+.output * {
+    font-size: 16px !important;
+}
+
+
