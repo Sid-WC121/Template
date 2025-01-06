@@ -253,3 +253,20 @@ body.loaded .md-sidebar {
 .md-footer {
     background: black;
 }
+
+
+/* Target all Jupyter Notebook content */
+.jp-Cell *,
+.jp-Notebook *,
+.md-content__inner *,
+.jp-OutputArea *,
+.jp-RenderedText *,
+.jp-RenderedMarkdown *,
+.jp-RenderedHTMLCommon *,
+.highlight *,
+.cell *,
+.output * {
+    font-size: 16px !important;
+}
+
+
